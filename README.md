@@ -22,7 +22,7 @@ This is a Next.js and Firebase Studio powered personal portfolio website for Vin
 *   **UI Components**: [ShadCN UI](https://ui.shadcn.com/)
 *   **Icons**: [Lucide React](https://lucide.dev/)
 *   **AI (Optional, if Genkit is used)**: [Genkit (Firebase)](https://firebase.google.com/docs/genkit)
-*   **Deployment**: [Firebase App Hosting](https://firebase.google.com/docs/app-hosting) (configured via `apphosting.yaml`)
+*   **Deployment**: [Vercel](https://vercel.com/)
 
 ## 🏁 Getting Started
 
@@ -102,7 +102,7 @@ Here's a brief overview of the key directories and files:
 ├── .env.example            # Example environment variables (if any)
 ├── .eslintrc.json          # ESLint configuration
 ├── .gitignore              # Files to ignore in Git
-├── apphosting.yaml         # Firebase App Hosting configuration
+├── apphosting.yaml         # Firebase App Hosting configuration (can be removed if exclusively using Vercel)
 ├── components.json         # ShadCN UI configuration
 ├── next.config.ts          # Next.js configuration
 ├── package.json            # Project dependencies and scripts
@@ -129,17 +129,24 @@ You can also update:
 
 ## 🚀 Deployment
 
-This project is configured for deployment with **Firebase App Hosting**. The `apphosting.yaml` file contains the basic configuration.
+This project is optimized for deployment with **Vercel**.
 
-To deploy:
+To deploy with Vercel:
 
-1.  Ensure you have the [Firebase CLI](https://firebase.google.com/docs/cli) installed and configured.
-2.  Link your local project to a Firebase project.
-3.  Deploy using the Firebase CLI:
-    ```bash
-    firebase deploy --only hosting
-    ```
-    (Or follow the specific App Hosting deployment commands if they differ).
+1.  **Sign up or Log in to Vercel**: Go to [vercel.com](https://vercel.com/).
+2.  **Connect your Git Repository**:
+    *   Create a new project on Vercel.
+    *   Connect Vercel to your GitHub, GitLab, or Bitbucket account where your project is hosted.
+    *   Select the repository for your portfolio.
+3.  **Configure Project Settings**:
+    *   Vercel usually auto-detects Next.js projects and configures them correctly.
+    *   Ensure the "Framework Preset" is set to "Next.js".
+    *   Set up any necessary environment variables (e.g., for Genkit API keys if you are using AI features).
+4.  **Deploy**: Click the "Deploy" button. Vercel will build and deploy your site.
+
+Vercel will automatically redeploy your site whenever you push changes to the connected Git branch (usually `main` or `master`).
+
+You might also want to remove the `apphosting.yaml` file if you are exclusively using Vercel and not Firebase App Hosting.
 
 ## 🤝 Contributing
 
