@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%; /* Light Lavender Grey */
+    --foreground: 250 15% 20%; /* Deep Indigo */
+
+    --card: 240 10% 99%; /* Very Light Lavender */
+    --card-foreground: 250 15% 20%; /* Deep Indigo */
+
+    --popover: 240 10% 99%; /* Very Light Lavender */
+    --popover-foreground: 250 15% 20%; /* Deep Indigo */
+
+    --primary: 260 60% 50%; /* Rich Violet */
+    --primary-foreground: 240 10% 98%; /* Light Lavender Grey (almost white) */
+
+    --secondary: 250 50% 65%; /* Muted Indigo */
+    --secondary-foreground: 240 10% 98%; /* Light Lavender Grey */
+
+    --muted: 240 10% 90%; /* Soft Grey */
+    --muted-foreground: 250 10% 45%; /* Medium Indigo-Grey */
+
+    --accent: 270 70% 88%; /* Light Amethyst - for accents */
+    --accent-foreground: 260 60% 30%; /* Darker Violet */
+    
+    --destructive: 350 70% 50%; /* A standard saturated red */
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 240 10% 85%; /* Light Grey Border */
+    --input: 240 10% 92%; /* Slightly Lighter Grey Input */
+    --ring: 260 70% 60%; /* Focus Ring - a slightly brighter violet */
+
+    --radius: 0.5rem;
+
+    /* Chart colors - shades of violet, indigo, and complementary cool tones */
+    --chart-1: 260 70% 55%;
+    --chart-2: 250 60% 60%;
+    --chart-3: 270 65% 50%;
+    --chart-4: 240 50% 70%; 
+    --chart-5: 280 55% 65%;
+  }
+
+  .dark {
+    --background: 250 15% 15%; /* Very Dark Indigo */
+    --foreground: 240 10% 88%; /* Light Lavender Grey */
+
+    --card: 250 15% 18%; /* Slightly lighter dark indigo for cards */
+    --card-foreground: 240 10% 88%; /* Light Lavender Grey */
+
+    --popover: 250 15% 15%; /* Very Dark Indigo */
+    --popover-foreground: 240 10% 88%; /* Light Lavender Grey */
+
+    --primary: 260 70% 65%; /* Brighter Violet for dark mode */
+    --primary-foreground: 250 15% 95%; /* Very Light Indigo/Almost White */
+
+    --secondary: 250 50% 50%; /* Medium Dark Indigo */
+    --secondary-foreground: 240 10% 88%; /* Light Lavender Grey */
+
+    --muted: 250 10% 25%; /* Dark Indigo-Grey */
+    --muted-foreground: 240 10% 65%; /* Medium Light Grey */
+
+    --accent: 270 60% 40%; /* Darker Amethyst for accents */
+    --accent-foreground: 240 10% 92%; /* Light Lavender Grey */
+
+    --destructive: 350 60% 55%; /* Slightly less intense Red for dark mode */
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 250 10% 30%; /* Medium Dark Indigo-Grey Border */
+    --input: 250 10% 28%; /* Dark Indigo-Grey Input */
+    --ring: 260 75% 70%; /* Focus Ring - brighter violet */
+    
+    /* Chart colors for dark mode - brighter violets, indigos */
+    --chart-1: 260 75% 70%;
+    --chart-2: 250 65% 75%;
+    --chart-3: 270 70% 65%;
+    --chart-4: 240 55% 80%;
+    --chart-5: 280 60% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
